@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Clichi</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+        }
+
+        h3 {
+            font-size: 2.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        h4 {
+            font-size: 1.5;
+            margin: 35px 0px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 2rem;
+        }
+
+        body {
+            background-color: #F8FAFC;
+        }
+
+        .videoDiv {
+            min-height: 0px;
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            padding: 0;
+        }
+
+        .shortAboutSection {
+            min-height: 0px;
+            padding: 75px 0px;
+            border-radius: 0px 0px 50px 50px;
+        }
+
+        .shortDescription {
+            padding: 50px;
+            border-radius: 50px;
+            background: linear-gradient(145deg, #ffffff, #d7d7d7);
+            box-shadow: 15px 15px 30px #cbcbcb,
+                -15px -15px 30px #ffffff;
+        }
+
+        .imageSection {
+            position: relative;
+            min-height: 480px;
+        }
+
+        .imageSection img {
+            position: absolute;
+            border-radius: 50%;
+            background: #efefef;
+            box-shadow: 15px 15px 30px #cbcbcb,
+                -15px -15px 30px #ffffff;
+        }
+
+        .imageSection .One {
+            top: 25%;
+            left: 20%;
+            width: 20%;
+            animation: float 2.5s linear .25s infinite alternate forwards;
+        }
+
+        .imageSection .Two {
+            top: 50%;
+            width: 28%;
+            left: 40%;
+            animation: float 2s linear .5s infinite alternate forwards;
+        }
+
+        .imageSection .Three {
+            left: 65%;
+            width: 35%;
+            top: 7%;
+            animation: float 3s linear infinite alternate forwards;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(-10%);
+            }
+
+            100% {
+                transform: translateY(10%);
+            }
+        }
+
+        .items {
+            align-items: center;
+        }
+
+        .featuresSection {
+            min-height: 0px;
+            background-color: white;
+            padding: 150px 0px;
+        }
+
+
+        .featureContent {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .features {
+            padding: 30px;
+            transition: .3s;
+            border-radius: 30px;
+            flex-basis: 24%;
+            border: 1px solid #efefef;
+        }
+
+        .features:hover {
+            background-color: rgba(239, 239, 239, 0.75);
+            box-shadow: 15px 15px 30px #cbcbcb,
+                -15px -15px 30px #ffffff;
+            transform: translateY(-25px);
+            cursor: context-menu;
+        }
+
+        .icons {
+            font-size: 1.5rem;
+            color: #FAFAFA;
+            padding: 30px;
+            border-radius: 15px;
+            background: rgb(252, 227, 138);
+            background: linear-gradient(45deg, rgba(252, 227, 138, 1) 0%, rgba(243, 129, 129, 1) 100%);
+            box-shadow: 15px 15px 30px #cbcbcb,
+                -15px -15px 30px #ffffff;
+        }
+
+        .productIndividual {
+            background-color: white;
+        }
+
+        .soloSection {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .texProduct {
+            flex-basis: 45%;
+        }
+
+        .videoProducts {
+            flex-basis: 45%;
+        }
+
+        #proSecondText {
+            order: 2;
+        }
+
+        .spanName {
+            background: rgb(252, 227, 138);
+            background: linear-gradient(45deg, rgba(252, 227, 138, 1) 0%, rgba(243, 129, 129, 1) 100%);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            font-size: 3rem;
+            color: #fce38a;
+            font-weight: 600;
+        }
+
+        .productIndividual .items {
+            min-height: 0px;
+            padding: 75px 0px;
+        }
+
+        .btnView {
+            font-size: 15px;
+            background-color: transparent;
+            border: 1px solid #fce38a;
+        }
+
+        .btnView:hover {
+            background: rgb(252, 227, 138);
+            background: linear-gradient(45deg, rgba(252, 227, 138, 1) 0%, rgba(243, 129, 129, 1) 100%);
+        }
+
+        .benefitSection {
+            min-height: 0px;
+            background-color: #F8FAFC;
+            padding: 75px 0px;
+        }
+
+        .benefitCard {
+            padding: 30px;
+            border-radius: 50px;
+            background: #f8fafc;
+            box-shadow: 20px 20px 60px #d3d5d6, -20px -20px 60px #ffffff;
+        }
+
+        .benefitList {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .numbersBenefit {
+            text-align: center;
+            flex-basis: 7%;
+            padding: 10px;
+            background-color: #42e695;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+        }
+
+        .textList {
+            flex-basis: 90%;
+        }
+
+        .benefitImgCollage {
+            padding: 5%;
+        }
+
+        .newsletterSection {
+            min-height: 0px;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            padding: 75px 0px;
+            background: white;
+        }
+
+        .actualNewsletter {
+            color: #efefef;
+            padding: 100px;
+            border-radius: 50px;
+            background: rgb(252, 227, 138);
+            background: linear-gradient(45deg, rgba(252, 227, 138, 1) 0%, rgba(243, 129, 129, 1) 100%);
+            box-shadow: 15px 15px 30px #cbcbcb,
+                -15px -15px 30px #ffffff;
+        }
+
+        .actualNewsletter input {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.75);
+            outline: none;
+            border: 1px solid #888888;
+            height: 50px;
+            padding-left: 30px;
+            border-radius: 7px;
+        }
+
+        .btnSignUp {
+            background-color: #212121;
+            margin: 30px 0px;
+            color: white;
+            padding: 15px 35px;
+            border: 1px solid transparent;
+            border-radius: 7px;
+        }
+
+        .btnSignUp:hover {
+            background-color: rgba(255, 255, 255, 0.75);
+            border: 1px solid #888888;
+            color: #212121;
+        }
+
+        ::placeholder {
+            font-size: 17px;
+        }
+
+        @media (min-width: 320px) and (max-width: 480px) {
+
+            h1 {
+                font-size: 2.6rem;
+            }
+
+            h3 {
+                font-size: 1.6rem;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            .shortAboutSection {
+                padding: 50px 0px;
+            }
+
+            .shortAboutSection .items {
+                padding-left: 4%;
+                padding-right: 4%;
+            }
+
+            .shortDescription {
+                padding: 25px;
+                border: 1px solid #efefef;
+            }
+
+            .featuresSection {
+                padding: 75px 0px;
+            }
+
+            .icons {
+                padding: 20px;
+            }
+
+            .features h4 {
+                margin: 20px 0px;
+            }
+
+            .features {
+                margin-bottom: 50px;
+            }
+
+
+            .imageSection {
+                margin-top: 50px;
+            }
+
+            .imageSection .One {
+                left: 15%;
+            }
+
+            .imageSection .Two {
+                left: 35%;
+            }
+
+            .imageSection .Three {
+                left: 55%;
+            }
+
+            .productIndividual h1 {
+                margin-bottom: 50px;
+            }
+
+            .productIndividual .items {
+                padding: 30px 0px;
+            }
+
+            #proSecondImg {
+                order: 2;
+            }
+
+            .soloSection {
+                flex-direction: column;
+            }
+
+            .featureContent {
+                flex-direction: column;
+            }
+
+            .benefitSection {
+                padding-right: 5%;
+                padding-left: 5%;
+            }
+
+            .benefitList {
+                flex-direction: column;
+            }
+
+            .benefitCard {
+                margin-bottom: 75px;
+            }
+
+            .numbersBenefit {
+                height: 45px;
+                width: 45px;
+                border-radius: 50%;
+                margin-bottom: 15px;
+            }
+
+            .benefitImgCollage {
+                padding: 0%;
+            }
+
+            .newsletterSection {
+                text-align: left;
+            }
+
+            .actualNewsletter {
+                padding: 30px;
+            }
+
+            .actualNewsletter input {
+                padding-left: 15px;
+            }
+
+            ::placeholder {
+                font-size: 14px;
+            }
+
+            .btnSignUp {
+                width: 100%;
+                padding: 7px 0px;
+                font-size: 14px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid videoDiv">
+        <div class="videoWrapper">
+            <video loop autoplay muted>
+                <source src="resized-video.mp4" type="video/mp4">
+                This browser doesn't support video tag.
+            </video>
+        </div>
+    </div>
+
+    <div class="container-fluid shortAboutSection">
+        <div class="container">
+            <div class="row items">
+                <div class="col-md-6 col-sm-6 shortDescription">
+                    <h3>
+                        Short About Us
+                    </h3>
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae suscipit a deserunt
+                        voluptatibus,
+                        quidem magni eligendi, itaque dolorem amet corrupti et dicta ducimus officiis unde illo
+                        voluptatum
+                        praesentium asperiores optio.
+                    </p>
+                </div>
+
+                <div class="col-md-6 col-sm-6 imageSection">
+                    <img class="img-fluid One" src="ocean blue.jpg" alt="">
+                    <img class="img-fluid Two" src="glamarous grey.jpg" alt="">
+                    <img class="img-fluid Three" src="Prominent Pink.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid featuresSection">
+        <div class="container">
+            <div class="featureContent">
+                <div class=" features">
+                    <i class="icons fas fa-drafting-compass"></i>
+                    <h4>Feature One</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci ratione recusandae at dicta
+                        unde!</p>
+                </div>
+                <div class=" features">
+                    <i class="icons fas fa-drafting-compass"></i>
+                    <h4>Feature Two</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci ratione recusandae at dicta
+                        unde!</p>
+                </div>
+                <div class=" features">
+                    <i class="icons fas fa-drafting-compass"></i>
+                    <h4>Feature Three</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci ratione recusandae at dicta
+                        unde!</p>
+                </div>
+                <div class=" features">
+                    <i class="icons fas fa-drafting-compass"></i>
+                    <h4>Feature Four</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci ratione recusandae at dicta
+                        unde!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid productIndividual">
+        <div class="container">
+            <h1 class="text-center">Products</h1>
+            <div class="soloSection items">
+                <div class="texProduct" id="proFirstText">
+                    <h2>
+                        Ocean <span class="spanName">Blue</span>
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam provident, natus tempora quae id
+                        possimus molestiae necessitatibus sit repellat quasi earum, enim itaque nisi dolor debitis
+                        reprehenderit autem quas, sapiente est ratione maiores? Dolores non praesentium quos repudiandae
+                        obcaecati iure expedita, labore id exercitationem, alias eos commodi numquam velit et?
+                    </p>
+
+                    <button class="btn btnView">View Product</button>
+                </div>
+
+                <div class="videoProducts text-center" id="proFirstImg">
+                    <video loop autoplay muted>
+                        <source src="Ocean Blue.mp4" type="video/mp4">
+                        This browser doesn't support video tag.
+                    </video>
+                </div>
+            </div>
+
+            <div class="soloSection items">
+                <div class="texProduct" id="proSecondText">
+                    <h2>
+                        Prominent <span class="spanName">Pink</span>
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam provident, natus tempora quae id
+                        possimus molestiae necessitatibus sit repellat quasi earum, enim itaque nisi dolor debitis
+                        reprehenderit autem quas, sapiente est ratione maiores? Dolores non praesentium quos repudiandae
+                        obcaecati iure expedita, labore id exercitationem, alias eos commodi numquam velit et?
+                    </p>
+                    <button class="btn btnView">View Product</button>
+                </div>
+
+                <div class="videoProducts text-center" id="proSecondImg">
+                    <video loop autoplay muted>
+                        <source src="Prominent Pink.mp4" type="video/mp4">
+                        This browser doesn't support video tag.
+                    </video>
+                </div>
+            </div>
+
+            <div class="soloSection items">
+                <div class="texProduct" id="proThirdText">
+                    <h2>
+                        Glamarous <span class="spanName">Grey</span>
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam provident, natus tempora quae id
+                        possimus molestiae necessitatibus sit repellat quasi earum, enim itaque nisi dolor debitis
+                        reprehenderit autem quas, sapiente est ratione maiores? Dolores non praesentium quos repudiandae
+                        obcaecati iure expedita, labore id exercitationem, alias eos commodi numquam velit et?
+                    </p>
+                    <button class="btn btnView">View Product</button>
+                </div>
+
+                <div class="videoProducts text-center" id="proThirdImg">
+                    <video loop autoplay muted>
+                        <source src="Glamarous Grey.mp4" type="video/mp4">
+                        This browser doesn't support video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid benefitSection">
+        <div class="container">
+            <div class="row items">
+                <div class="col-md-6 col-sm-6 benefitCard">
+                    <h3>Why Use <span class="spanName"> Clichi</span></h3>
+                    <div>
+                        <div class="benefitList">
+                            <div class="numbersBenefit">
+                                1.
+                            </div>
+
+                            <div class="textList">
+                                <p>Lorem ipsum dolor sit.</p>
+                            </div>
+                        </div>
+
+                        <div class="benefitList">
+                            <div class="numbersBenefit">
+                                2.
+                            </div>
+
+                            <div class="textList">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Natus.</p>
+                            </div>
+                        </div>
+
+                        <div class="benefitList">
+                            <div class="numbersBenefit">
+                                3.
+                            </div>
+
+                            <div class="textList">
+                                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                            </div>
+                        </div>
+
+                        <div class="benefitList">
+                            <div class="numbersBenefit">
+                                4.
+                            </div>
+
+                            <div class="textList">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Quia, enim sit?</p>
+                            </div>
+                        </div>
+
+                        <div class="benefitList">
+                            <div class="numbersBenefit">
+                                5.
+                            </div>
+
+                            <div class="textList">
+                                <p>Lorem ipsum dolor sit amet.</p>
+                            </div>
+                        </div>
+
+                        <div class="benefitList">
+                            <div class="numbersBenefit">
+                                6.
+                            </div>
+
+                            <div class="textList">
+                                <p>Lorem ipsum, dolor sit amet consectetur
+                                    adipisicing.</p>
+                            </div>
+                        </div>
+
+                        <div class="benefitList">
+                            <div class="numbersBenefit">
+                                7.
+                            </div>
+
+                            <div class="textList">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Sunt, assumenda.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6 benefitImgCollage">
+                    <img class="img-fluid" src="benefitCollage.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid newsletterSection">
+        <div class="container">
+            <div class="actualNewsletter">
+                <h3>Get in on the best deals & the latest scoop.</h3>
+                <p>Sign up to be the first to hear about big news, see original features, and snag exclusive offers. You
+                    can unsubscribe with one click at any time, but we think you won’t want to. </p>
+                <input type="email" placeholder="Enter your e-mail address">
+                <button class="btn btnSignUp">Sign Up</button>
+
+                <p>At Clichi we have a healthy respect for privacy.</p>
+                <a style="color: #efefef;" href="#">Read your Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Clichi Feature Section</title>
+
+    <style>
+        .secondSectionFeature {
+            padding: 45px 0px;
+        }
+
+        .featureProducts {
+            margin-bottom: 25px;
+        }
+
+        .featureProducts .btnView {
+            margin: 20px 0px;
+        }
+
+        .featureProductDivIndividual {
+            position: relative;
+            transition: 250ms;
+        }
+
+        .lightVer {
+            transition: 250ms;
+        }
+
+
+        .darkVer {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: -1;
+        }
+
+        .lightVer:hover {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid secondSectionFeature">
+        <div class="container">
+            <div class="row">
+                <div class=" col-md-4 col-sm-4 featureProducts">
+                    <div class="featureProductDivIndividual">
+                        <img class="img-fluid lightVer" src="Light Grey.png" alt="">
+                        <img class="img-fluid darkVer" src="Dark Grey.png" alt="">
+                        <a class="btn btnView" href="#">View Product</a>
+                    </div>
+                </div>
+
+                <div class=" col-md-4 col-sm-4 featureProducts">
+                    <div class="featureProductDivIndividual">
+                        <img class="img-fluid lightVer" src="Light Pink.png" alt="">
+                        <img class="img-fluid darkVer" src="Dark Pink.png" alt="">
+                        <a class="btn btnView" href="#">View Product</a>
+                    </div>
+                </div>
+
+                <div class=" col-md-4 col-sm-4 featureProducts">
+                    <div class="featureProductDivIndividual">
+                        <img class="img-fluid lightVer" src="Light Blue.png" alt="">
+                        <img class="img-fluid darkVer" src="Dark Blue.png" alt="">
+                        <a class="btn btnView" href="#">View Product</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

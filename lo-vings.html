@@ -136,7 +136,7 @@
             align-items: center;
         }
 
-        .featuresSection {
+        /* .featuresSection {
             min-height: 0px;
             background-color: white;
             padding: 150px 0px;
@@ -174,10 +174,48 @@
             background: linear-gradient(45deg, rgba(252, 227, 138, 1) 0%, rgba(243, 129, 129, 1) 100%);
             box-shadow: 15px 15px 30px #cbcbcb,
                 -15px -15px 30px #ffffff;
+        } */
+
+        .secondSectionFeature {
+            padding: 45px 0px;
+        }
+
+        .featureProducts {
+            margin-bottom: 25px;
+        }
+
+        .featureProducts img {
+            border: 5px solid #e5e5e5;
+        }
+
+        .featureProducts .btnView {
+            margin: 20px 0px;
+        }
+
+        .featureProductDivIndividual {
+            position: relative;
+            -webkit-transition: 250ms;
+            transition: 250ms;
+        }
+
+        .lightVer {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 2;
+            -webkit-transition: 250ms;
+            transition: 250ms;
+        }
+
+
+        .lightVer:hover {
+            opacity: 0;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
         }
 
         .productIndividual {
             background-color: white;
+            padding: 45px 0px;
         }
 
         .soloSection {
@@ -478,7 +516,7 @@
         </div>
     </div>
 
-    <div class="container-fluid featuresSection">
+    <!-- <div class="container-fluid featuresSection">
         <div class="container">
             <div class="featureContent">
                 <div class=" features">
@@ -507,7 +545,72 @@
                 </div>
             </div>
         </div>
+    </div> -->
+
+    <!-- Feature Section Added New -->
+
+    <div class="container-fluid secondSectionFeature">
+        <div class="container">
+            <div class="FeatureWrapper">
+                <div class=" featureProducts">
+                    <div class="featureProductDivIndividual">
+                        <img class="img-fluid lightVer"
+                            src="https://cdn.shopify.com/s/files/1/0435/6476/1253/files/Light_Grey.png?v=1616874255"
+                            alt="">
+                        <img class="img-fluid darkVer"
+                            src="https://cdn.shopify.com/s/files/1/0435/6476/1253/files/Dark_Grey.png?v=1616874255"
+                            alt="">
+
+                        <h4 class="text-center">
+                            Glamarous Grey
+                        </h4>
+                        <div class="text-center">
+                            <a href="https://clichi.com/products/glamarous-grey" class="btn">Buy Now</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class=" featureProducts">
+                    <div class="featureProductDivIndividual">
+                        <img class="img-fluid lightVer"
+                            src="https://cdn.shopify.com/s/files/1/0435/6476/1253/files/Light_Pink.png?v=1616874255"
+                            alt="">
+                        <img class="img-fluid darkVer"
+                            src="https://cdn.shopify.com/s/files/1/0435/6476/1253/files/Dark_Pink.png?v=1616874255"
+                            alt="">
+
+                        <h4 class="text-center">Prominent Red
+                        </h4>
+                        <div class="text-center">
+                            <a class="btn" href="https://clichi.com/products/Prominent-Red">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" featureProducts">
+                    <div class="featureProductDivIndividual">
+                        <img class="img-fluid lightVer"
+                            src="https://cdn.shopify.com/s/files/1/0435/6476/1253/files/Light_Blue.png?v=1616874255"
+                            alt="">
+                        <img class="img-fluid darkVer"
+                            src="https://cdn.shopify.com/s/files/1/0435/6476/1253/files/Dark_Blue.png?v=1616874255"
+                            alt="">
+
+                        <h4 class="text-center">Ocean Blue
+                        </h4>
+                        <div class="text-center">
+                            <a class="btn" href="https://clichi.com/products/glasogon">Buy Now</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
+
+
+    <!-- Feature New Ends -->
 
     <div class="container-fluid productIndividual">
         <div class="container">

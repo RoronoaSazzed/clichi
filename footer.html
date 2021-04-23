@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Footer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+        }
+
+        h3 {
+            font-size: 2.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        h4 {
+            font-size: 1.5;
+            margin: 35px 0px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 2rem;
+        }
+
+        /* FooterDiv */
+
+        .footerDiv {
+            min-height: 0px;
+            padding: 50px 0px;
+            background: rgb(245, 247, 250);
+            background: -webkit-linear-gradient(top, rgba(245, 247, 250, 1) 0%, rgba(184, 198, 219, 1) 100%);
+            background: linear-gradient(180deg, rgba(245, 247, 250, 1) 0%, rgba(184, 198, 219, 1) 100%);
+        }
+
+        .columnOne,
+        .columnTwo,
+        .columnThree,
+        .columnFour {
+            padding: 0% 5%;
+        }
+
+        .columnOne:after,
+        .columnTwo:after,
+        .columnThree:after {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 100px;
+            background-color: #404040;
+            position: absolute;
+            top: 50%;
+            right: 0%;
+            -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+        }
+
+        .footerDiv h4 {
+            margin-top: 0px;
+            margin-bottom: 30px;
+            font-weight: 600;
+            color: #404040;
+        }
+
+        .footerDiv a {
+            font-size: 16px;
+            color: #404040;
+        }
+
+        .footerMenu-information,
+        .footerMenu-shop,
+        .footerMenu-social,
+        .footerMenu-policies {
+            list-style: none;
+        }
+
+        .footerMenu-information li p,
+        .footerMenu-shop li p,
+        .footerMenu-social li p,
+        .footerMenu-policies li p {
+            margin-bottom: 5px;
+        }
+
+        .footerMenu-social i {
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        /* Copyright Div */
+
+        .copyrightDiv {
+            min-height: 0px;
+            background-color: #D7E1EC;
+        }
+
+        .colOne,
+        .colTwo,
+        .colThree {
+            display: -ms-grid;
+            display: grid;
+            place-items: center;
+        }
+
+        .colTwo {
+            padding: 15px 0px;
+        }
+
+        .colThree p {
+            font-size: 15px;
+            margin: 0;
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+
+            .columnOne,
+            .columnTwo,
+            .columnThree,
+            .columnFour {
+                padding: 2%;
+            }
+
+            .columnOne:after,
+            .columnTwo:after,
+            .columnThree:after {
+                display: none;
+            }
+
+            .footerDiv h4 {
+                font-size: 20px;
+            }
+
+        }
+
+
+        @media (min-width: 320px) and (max-width: 480px) {
+            .footerDiv {
+                padding: 30px;
+            }
+
+            .footerDiv h4 {
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+
+            .columnOne:after,
+            .columnTwo:after,
+            .columnThree:after {
+                display: none;
+            }
+
+            .copyrightDiv {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="footerDiv container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="columnOne col-md-3 col-sm-3">
+                    <h4>Information</h4>
+                    <ul class="footerMenu-information">
+                        <li>
+                            <p>
+                                <a href="#">About</a>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <a href="#">Contact</a>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <a href="#">FAQ's</a>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <a href="#">Lens Guide</a>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <a href="#">My Personal Data</a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="columnTwo col-md-3 col-sm-3">
+                    <h4>Shop</h4>
+                    <ul class="footerMenu-shop">
+                        <li>
+                            <p>
+                                <a href="#">C5 - Classic Grey</a>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <a href="#">C6 - Tropical Red</a>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <a href="#">C1 - Ocean Blue</a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="columnThree col-md-3 col-sm-3">
+                    <h4>Social</h4>
+                    <ul class="footerMenu-social">
+                        <li>
+                            <p>
+                                <a href=""><span><i class="fab fa-facebook"></i></span> Facebook</a>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <a href=""><span><i class="fab fa-twitter"></i></span> Twitter</a>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <a href=""><span><i class="fab fa-pinterest"></i></span> Pinterest</a>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <a href=""><span><i class="fab fa-instagram"></i></span> Instagram</a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="columnFour col-md-3 col-sm-3">
+                    <h4>Policies</h4>
+                    <ul class="footerMenu-policies">
+                        <li>
+                            <p>
+                                <a href="#">Privacy</a>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <a href="#">Terms</a>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <a href="#">Shipping</a>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <a href="#">Refund</a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyrightDiv container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="colOne col-md-4 col-sm-4 col-12">
+                    <img class="img-fluid" src="payments.png" alt="">
+                </div>
+
+                <div class="colTwo col-md-4 col-sm-4 col-6">
+                    <img class="img-fluid" src="clichi Logo.png" alt="">
+                </div>
+
+                <div class="colThree col-md-4 col-sm-4 col-6">
+                    <p>© Clichi - 2021</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

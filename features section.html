@@ -22,64 +22,201 @@
             margin-bottom: 25px;
         }
 
+        .featureProducts img {
+            /* border: 5px solid #e5e5e5;z */
+        }
+
         .featureProducts .btnView {
             margin: 20px 0px;
         }
 
         .featureProductDivIndividual {
             position: relative;
+            -webkit-transition: 250ms;
             transition: 250ms;
         }
 
         .lightVer {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 2;
+            -webkit-transition: 250ms;
             transition: 250ms;
         }
 
 
-        .darkVer {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            z-index: -1;
-        }
-
         .lightVer:hover {
             opacity: 0;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        }
+
+        /* Code For Mobile Version */
+
+        #shopify-section-hero-1 {
+            margin-top: 0px;
+        }
+
+        .hero__inner h2 {
+            font-size: 1.5rem;
+        }
+
+        .index-section {
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+
+        .secondSectionFeature {
+            padding: 0px;
+        }
+
+        .FeatureWrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .featureProductDivIndividual {
+            flex-basis: 30%;
+        }
+
+        .shortAboutSection .items {
+            padding-left: 12%;
+            padding-right: 12%;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: 13px;
         }
     </style>
 </head>
 
 <body>
     <div class="container-fluid secondSectionFeature">
-        <div class="container">
-            <div class="row">
-                <div class=" col-md-4 col-sm-4 featureProducts">
-                    <div class="featureProductDivIndividual">
-                        <img class="img-fluid lightVer" src="Light Grey.png" alt="">
-                        <img class="img-fluid darkVer" src="Dark Grey.png" alt="">
-                        <a class="btn btnView" href="#">View Product</a>
+        <div class="">
+            <div class="FeatureWrapper">
+                <div class="featureProductDivIndividual">
+                    <img class="img-fluid lightVer" src="Light Grey.png" alt="">
+                    <img class="img-fluid darkVer" src="Dark Grey.png" alt="">
+
+                    <h4 class="productTitle">
+                        Glamarous Grey
+                    </h4>
+                    <div class="text-center">
+                        <a href="https://clichi.com/products/glamarous-grey" class="btn buyButton">Buy Now</a>
+                    </div>
+
+                </div>
+
+                <div class="featureProductDivIndividual">
+                    <img class="img-fluid lightVer" src="Light Pink.png" alt="">
+                    <img class="img-fluid darkVer" src="Dark Pink.png" alt="">
+
+                    <h4 class="productTitle">
+                        Prominent Red
+                    </h4>
+                    <div class="text-center">
+                        <a class="btn buyButton" href="https://clichi.com/products/Prominent-Red">Buy Now</a>
                     </div>
                 </div>
 
-                <div class=" col-md-4 col-sm-4 featureProducts">
-                    <div class="featureProductDivIndividual">
-                        <img class="img-fluid lightVer" src="Light Pink.png" alt="">
-                        <img class="img-fluid darkVer" src="Dark Pink.png" alt="">
-                        <a class="btn btnView" href="#">View Product</a>
+                <div class="featureProductDivIndividual">
+                    <img class="img-fluid lightVer" src="Light Blue.png" alt="">
+                    <img class="img-fluid darkVer" src="Dark Blue.png" alt="">
+
+                    <h4 class="productTitle">
+                        Ocean Blue
+                    </h4>
+                    <div class="text-center">
+                        <a class="btn buyButton" href="https://clichi.com/products/glasogon">Buy Now</a>
                     </div>
+
                 </div>
 
-                <div class=" col-md-4 col-sm-4 featureProducts">
-                    <div class="featureProductDivIndividual">
-                        <img class="img-fluid lightVer" src="Light Blue.png" alt="">
-                        <img class="img-fluid darkVer" src="Dark Blue.png" alt="">
-                        <a class="btn btnView" href="#">View Product</a>
+                <div class="container-fluid benefitSection">
+                    <div class="container">
+                        <div class="row items">
+                            <div class="col-md-6 col-sm-6 benefitCard">
+                                <img class="collageMobile img-fluid"
+                                    src="https://cdn.shopify.com/s/files/1/0435/6476/1253/files/why_clichi_new.png?v=1616870543"
+                                    alt="">
+                                <h3>Why Use <span class="spanName"> Clichi</span>
+                                </h3>
+                                <div>
+                                    <div class="benefitList">
+                                        <div class="numbersBenefit">
+                                            1.
+                                        </div>
+
+                                        <div class="textList">
+                                            <p>Lorem ipsum dolor sit.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="benefitList">
+                                        <div class="numbersBenefit">
+                                            2.
+                                        </div>
+
+                                        <div class="textList">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                                                elit. Natus.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="benefitList">
+                                        <div class="numbersBenefit">
+                                            3.
+                                        </div>
+
+                                        <div class="textList">
+                                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="benefitList">
+                                        <div class="numbersBenefit">
+                                            4.
+                                        </div>
+
+                                        <div class="textList">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                                                elit. Quia, enim sit?</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="benefitList">
+                                        <div class="numbersBenefit">
+                                            5.
+                                        </div>
+
+                                        <div class="textList">
+                                            <p>Lorem ipsum dolor sit amet.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6 benefitImgCollage">
+                                <img class="img-fluid"
+                                    src="https://cdn.shopify.com/s/files/1/0435/6476/1253/files/why_clichi_new.png?v=1616870543"
+                                    alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
 
             </div>
         </div>
-    </div>
+
+        <div>
+
+        </div>
 </body>
 
 </html>

@@ -12,6 +12,7 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
     <title>Footer</title>
 
     <style>
@@ -145,6 +146,10 @@
             margin: 0;
         }
 
+        #mobileFooter {
+            display: none;
+        }
+
         @media (min-width: 768px) and (max-width: 1024px) {
 
             .columnOne,
@@ -168,6 +173,33 @@
 
 
         @media (min-width: 320px) and (max-width: 480px) {
+
+            #pcFooter {
+                display: none;
+            }
+
+            #mobileFooter {
+                display: block;
+            }
+
+            .accordionButton {
+                background-color: transparent;
+                border: none;
+                font-weight: 600;
+                color: #404040;
+                border-bottom: 1px solid #404040;
+            }
+
+            .accordionButton:focus {
+                outline: none;
+                border-bottom: 1px solid transparent;
+            }
+
+            .accordionButton span i {
+                font-size: 20px;
+                margin-left: 10px;
+            }
+
             .footerDiv {
                 padding: 30px;
             }
@@ -186,38 +218,46 @@
             .copyrightDiv {
                 padding: 15px;
             }
+
+
         }
     </style>
 </head>
 
 <body>
+
+
+
+
+
+
     <div class="footerDiv container-fluid">
-        <div class="container">
+        <div class="container" id="pcFooter">
             <div class="row">
                 <div class="columnOne col-md-3 col-sm-3">
                     <h4>Information</h4>
                     <ul class="footerMenu-information">
                         <li>
                             <p>
-                                <a href="#">About</a>
+                                <a href="https://clichi.com/pages/about-us">About</a>
                             </p>
                         </li>
 
                         <li>
                             <p>
-                                <a href="#">Contact</a>
+                                <a href="https://clichi.com/pages/contact-us">Contact</a>
                             </p>
                         </li>
 
                         <li>
                             <p>
-                                <a href="#">FAQ's</a>
+                                <a href="https://clichi.com/pages/faqs">FAQ's</a>
                             </p>
                         </li>
 
                         <li>
                             <p>
-                                <a href="#">Lens Guide</a>
+                                <a href="https://clichi.com/pages/lens-guide">Lens Guide</a>
                             </p>
                         </li>
 
@@ -234,19 +274,19 @@
                     <ul class="footerMenu-shop">
                         <li>
                             <p>
-                                <a href="#">C5 - Classic Grey</a>
+                                <a href="https://clichi.com/products/classic-grey">C5 - Classic Grey</a>
                             </p>
                         </li>
 
                         <li>
                             <p>
-                                <a href="#">C6 - Tropical Red</a>
+                                <a href="https://clichi.com/products/tropical-red">C6 - Tropical Red</a>
                             </p>
                         </li>
 
                         <li>
                             <p>
-                                <a href="#">C1 - Ocean Blue</a>
+                                <a href="https://clichi.com/products/ocean-blue">C1 - Ocean Blue</a>
                             </p>
                         </li>
                     </ul>
@@ -257,25 +297,14 @@
                     <ul class="footerMenu-social">
                         <li>
                             <p>
-                                <a href=""><span><i class="fab fa-facebook"></i></span> Facebook</a>
+                                <a href="https://www.facebook.com/clichieyewear"><span><i
+                                            class="fab fa-facebook"></i></span> Facebook</a>
                             </p>
                         </li>
-
                         <li>
                             <p>
-                                <a href=""><span><i class="fab fa-twitter"></i></span> Twitter</a>
-                            </p>
-                        </li>
-
-                        <li>
-                            <p>
-                                <a href=""><span><i class="fab fa-pinterest"></i></span> Pinterest</a>
-                            </p>
-                        </li>
-
-                        <li>
-                            <p>
-                                <a href=""><span><i class="fab fa-instagram"></i></span> Instagram</a>
+                                <a href="https://www.instagram.com/clichieyewear/"><span><i
+                                            class="fab fa-instagram"></i></span> Instagram</a>
                             </p>
                         </li>
                     </ul>
@@ -286,41 +315,212 @@
                     <ul class="footerMenu-policies">
                         <li>
                             <p>
-                                <a href="#">Privacy</a>
+                                <a href="https://clichi.com/pages/privacy">Privacy</a>
                             </p>
                         </li>
 
                         <li>
                             <p>
-                                <a href="#">Terms</a>
+                                <a href="https://clichi.com/pages/terms">Terms</a>
                             </p>
                         </li>
 
                         <li>
                             <p>
-                                <a href="#">Shipping</a>
+                                <a href="https://clichi.com/pages/shipping">Shipping</a>
                             </p>
                         </li>
 
                         <li>
                             <p>
-                                <a href="#">Refund</a>
+                                <a href="https://clichi.com/pages/refund">Refund</a>
                             </p>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
+
+
+
+
+
+
+
+        <!-- Mobile Footer -->
+
+        <div class="container accordion" id="mobileFooter">
+            <div class="row">
+                <div class="accordionOne col-12">
+                    <div id="heading">
+                        <h4>
+                            <button class="accordionButton" type="button" data-toggle="collapse"
+                                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Information
+                            </button>
+                        </h4>
+                    </div>
+
+                    <div id="collapseOne" class="show" aria-labelledby="headingOne" data-parent="#mobileFooter">
+                        <div class="columnOne">
+                            <ul class="footerMenu-information">
+                                <li>
+                                    <p>
+                                        <a href="https://clichi.com/pages/about-us">About</a>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        <a href="https://clichi.com/pages/contact-us">Contact</a>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        <a href="https://clichi.com/pages/faqs">FAQ's</a>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        <a href="https://clichi.com/pages/lens-guide">Lens Guide</a>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        <a href="#">My Personal Data</a>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordionTwo col-12">
+                    <div id="heading">
+                        <h4>
+                            <button class="accordionButton" type="button" data-toggle="collapse"
+                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Shop
+                            </button>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#mobileFooter">
+                        <div class="columnTwo">
+                            <ul class="footerMenu-shop">
+                                <li>
+                                    <p>
+                                        <a href="https://clichi.com/products/classic-grey">C5 - Classic Grey</a>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        <a href="https://clichi.com/products/tropical-red">C6 - Tropical Red</a>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        <a href="https://clichi.com/products/ocean-blue">C1 - Ocean Blue</a>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordionThree col-12">
+                    <div id="heading">
+                        <h4>
+                            <button class="accordionButton" type="button" data-toggle="collapse"
+                                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Social
+                            </button>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#mobileFooter">
+                        <div class="columnThree">
+                            <ul class="footerMenu-social">
+                                <li>
+                                    <p>
+                                        <a href="https://www.facebook.com/clichieyewear"><span><i
+                                                    class="fab fa-facebook"></i></span> Facebook</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <a href="https://www.instagram.com/clichieyewear/"><span><i
+                                                    class="fab fa-instagram"></i></span> Instagram</a>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordionFour col-12">
+                    <div id="heading">
+                        <h4>
+                            <button class="accordionButton" type="button" data-toggle="collapse"
+                                data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Policies
+                            </button>
+                        </h4>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#mobileFooter">
+                        <div class="columnFour">
+                            <ul class="footerMenu-policies">
+                                <li>
+                                    <p>
+                                        <a href="https://clichi.com/pages/privacy">Privacy</a>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        <a href="https://clichi.com/pages/terms">Terms</a>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        <a href="https://clichi.com/pages/shipping">Shipping</a>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        <a href="https://clichi.com/pages/refund">Refund</a>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
     </div>
     <div class="copyrightDiv container-fluid">
         <div class="container">
             <div class="row">
                 <div class="colOne col-md-4 col-sm-4 col-12">
-                    <img class="img-fluid" src="payments.png" alt="">
+                    <img class="img-fluid"
+                        src="https://cdn.shopify.com/s/files/1/0435/6476/1253/files/payments.png?v=1619214454" alt="">
                 </div>
 
                 <div class="colTwo col-md-4 col-sm-4 col-6">
-                    <img class="img-fluid" src="clichi Logo.png" alt="">
+                    <img class="img-fluid"
+                        src="https://cdn.shopify.com/s/files/1/0435/6476/1253/files/clichi_logo.png?v=1619214454"
+                        alt="">
                 </div>
 
                 <div class="colThree col-md-4 col-sm-4 col-6">
@@ -329,6 +529,15 @@
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
